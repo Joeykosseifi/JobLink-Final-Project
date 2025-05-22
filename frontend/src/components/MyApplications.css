@@ -1,0 +1,358 @@
+/* Modern Professional My Applications Layout */
+.my-applications-container {
+  max-width: 1400px;
+  width: 98%;
+  margin: 3.5rem auto 0;
+  padding: 2.5rem 1.5rem;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: #333;
+  background-color: #f9fafb;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a365d;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+  letter-spacing: -0.5px;
+}
+
+.applications-summary {
+  margin-bottom: 2rem;
+  font-size: 1.15rem;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.applications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.application-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.application-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.application-header {
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #f7fafc;
+}
+
+.job-info {
+  flex: 1;
+}
+
+.job-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.3px;
+}
+
+.company-name {
+  font-size: 1.05rem;
+  color: #4a5568;
+}
+
+.application-status {
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.status-pending {
+  background-color: #feebc8;
+  color: #c05621;
+}
+
+.status-reviewed {
+  background-color: #bee3f8;
+  color: #2b6cb0;
+}
+
+.status-interviewed {
+  background-color: #e9d8fd;
+  color: #553c9a;
+}
+
+.status-rejected {
+  background-color: #fed7d7;
+  color: #c53030;
+}
+
+.status-offered {
+  background-color: #c6f6d5;
+  color: #276749;
+}
+
+.status-hired {
+  background-color: #b2f5ea;
+  color: #234e52;
+}
+
+.application-details {
+  padding: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: #fff;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.detail-item i {
+  font-size: 1.5rem;
+  color: #4299e1;
+}
+
+.detail-item h3 {
+  font-size: 0.9rem;
+  color: #718096;
+  margin-bottom: 0.35rem;
+  font-weight: 500;
+}
+
+.detail-item p {
+  font-size: 1rem;
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.documents-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.document-item {
+  padding: 0.4rem 0.85rem;
+  background-color: #ebf8ff;
+  color: #3182ce;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.document-item:hover {
+  background-color: #bee3f8;
+  transform: translateY(-1px);
+}
+
+.application-footer {
+  padding: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #f8fafc;
+}
+
+.view-job-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.2rem;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.view-job-btn::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f06e";  /* Eye icon */
+  font-weight: 900;
+}
+
+.view-job-btn:hover {
+  background-color: #3182ce;
+  box-shadow: 0 2px 8px rgba(66, 153, 225, 0.3);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+/* Empty state styles */
+.no-applications {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.no-applications i {
+  font-size: 4.5rem;
+  color: #a0aec0;
+  margin-bottom: 1.5rem;
+}
+
+.no-applications h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a365d;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.no-applications p {
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.browse-jobs-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.5rem;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.browse-jobs-btn::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f002";  /* Search icon */
+  font-weight: 900;
+}
+
+.browse-jobs-btn:hover {
+  background-color: #3182ce;
+  box-shadow: 0 2px 8px rgba(66, 153, 225, 0.3);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+/* Loading and error states */
+.my-applications-loading,
+.my-applications-error {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.spinner {
+  border: 4px solid rgba(66, 153, 225, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #4299e1;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.my-applications-error i {
+  font-size: 4rem;
+  color: #e53e3e;
+  margin-bottom: 1.5rem;
+}
+
+.my-applications-error h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a365d;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.my-applications-error p {
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.retry-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.5rem;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.retry-btn::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f2f1";  /* Sync icon */
+  font-weight: 900;
+}
+
+.retry-btn:hover {
+  background-color: #3182ce;
+  box-shadow: 0 2px 8px rgba(66, 153, 225, 0.3);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .my-applications-container {
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+  }
+  
+  .application-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .application-status {
+    margin-top: 1rem;
+  }
+  
+  .detail-item {
+    min-width: 100%;
+  }
+
+  .page-title {
+    font-size: 1.7rem;
+  }
+} 

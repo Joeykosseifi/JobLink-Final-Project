@@ -1,0 +1,597 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.5rem;
+  background: linear-gradient(to right, #0077b5, #0a66c2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 70px;
+  transition: all 0.3s ease;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-brand {
+  flex: 1;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-brand a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-brand a:hover {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.nav-brand a i {
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-left: auto;
+  margin-right: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-link i {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.nav-link:hover i {
+  color: #ffffff;
+}
+
+.nav-link.active {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-link.active i {
+  color: #ffffff;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:first-child {
+  background-color: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+}
+
+.nav-button:first-child:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button:last-child {
+  background-color: #ffffff;
+  color: #0a66c2;
+}
+
+.nav-button:last-child:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
+}
+
+.admin-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 24px;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.admin-link i {
+  color: #ffffff;
+}
+
+.admin-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.admin-link.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.account-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.account-button:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.account-button i {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.account-dropdown {
+  position: relative;
+}
+
+.account-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: 280px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  z-index: 1000;
+  transform: translateY(-10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+
+.account-menu.active {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.account-menu::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  right: 20px;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  transform: rotate(45deg);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.account-menu-header {
+  padding: 16px 20px;
+  background-color: #f3f2ef;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #191919;
+  font-size: 1.1rem;
+}
+
+.user-email {
+  color: #666666;
+  font-size: 0.9rem;
+}
+
+.user-role {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 24px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.user-role.admin {
+  background-color: rgba(10, 102, 194, 0.1);
+  color: red;
+  border: 1px solid red;
+}
+
+.user-role.user {
+  background-color: rgba(10, 102, 194, 0.08);
+  color: #0a66c2;
+  border: 1px solid #0a66c2;
+}
+
+.user-role.employer {
+  background-color: rgba(5, 118, 66, 0.08);
+  color: #057642;
+  border: 1px solid #057642;
+}
+
+.account-menu-items {
+  padding: 8px 0;
+}
+
+.dropdown-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  color: #666666;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.dropdown-menu-item:hover {
+  background-color: #f3f2ef;
+  color: #0a66c2;
+}
+
+.dropdown-menu-item i {
+  font-size: 1.1rem;
+  color: #666666;
+  width: 22px;
+  text-align: center;
+}
+
+.dropdown-menu-item:hover i {
+  color: #0a66c2;
+}
+
+.menu-notification-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  height: 18px;
+  min-width: 18px;
+  border-radius: 50%;
+  padding: 0 4px;
+  margin-left: 5px;
+}
+
+.dropdown-menu-item.logout {
+  color: #dc2626;
+}
+
+.dropdown-menu-item.logout:hover {
+  background-color: rgba(220, 38, 38, 0.08);
+}
+
+.dropdown-menu-item.logout i {
+  color: #dc2626;
+}
+
+.menu-divider {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 8px 0;
+}
+
+.menu-section-title {
+  padding: 8px 20px 4px;
+  color: #666666;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: transparent;
+}
+
+.account-switch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.account-switch:hover, .dropdown-menu-item.account-switch:hover {
+  background-color: #f3f2ef;
+  
+}
+
+.account-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.account-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  
+}
+.account-name:hover{
+  color: #0a66c2;
+}
+
+.account-email {
+  font-size: 0.75rem;
+}
+.account-email:hover{
+  color: #0a66c2;
+}
+
+/* Mobile menu toggle */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .nav-links {
+    gap: 1rem;
+    margin-right: 1rem;
+  }
+  
+  .nav-link {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1.5rem;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    order: 1;
+  }
+
+  .nav-brand {
+    font-size: 1.5rem;
+    order: 0;
+  }
+  
+  .nav-brand a i {
+    font-size: 1.75rem;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, #0077b5, #0a66c2);
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+    transform: translateY(-150%);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 999;
+    margin: 0;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    justify-content: center;
+  }
+
+  .nav-link.active::after {
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 3px;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .auth-buttons {
+    order: 2;
+  }
+
+  .nav-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .account-button span {
+    display: none;
+  }
+
+  .account-menu {
+    width: 260px;
+    right: 0;
+  }
+  
+  .account-menu::before {
+    right: 20px;
+  }
+
+  .admin-link {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+  
+  .nav-brand a span {
+    display: none;
+  }
+  
+  .nav-button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .account-menu {
+    width: 240px;
+    right: 0;
+  }
+  
+  .account-menu::before {
+    right: 20px;
+  }
+
+  .auth-buttons {
+    gap: 0.5rem;
+  }
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #f44336;
+  color: white;
+  font-size: 0.7rem;
+  height: 18px;
+  width: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.upgrade-badge {
+  background-color: #ff9800;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 6px rgba(231, 76, 60, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
+  }
+}
